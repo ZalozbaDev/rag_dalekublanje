@@ -15,9 +15,12 @@ documents = [
 client = chromadb.Client()
 collection = client.create_collection(name="docs")
 
+embedding_model="nomic-embed-text"
+# embedding_model="bge-m3"
+
 # store each document in a vector embedding database
 for i, d in enumerate(documents):
-  response = ollama.embed(model="nomic-embed-text", input=d)
+  response = ollama.embed(model=embedding_model, input=d)
   embeddings = response["embeddings"]
   collection.add(
     ids=[str(i)],
@@ -26,14 +29,14 @@ for i, d in enumerate(documents):
   )
 
 # an example input
-# prompt = "What animals are llamas related to?"
+prompt = "What animals are llamas related to?"
 # prompt = "What kind of food do llamas like to eat?"
-prompt = "What colors do llamas like most to wear?"
+# prompt = "What colors do llamas like most to wear?"
 
 
 # generate an embedding for the input and retrieve the most relevant doc
 response = ollama.embed(
-  model="nomic-embed-text",
+  model=embedding_model,
   input=prompt
 )
 
