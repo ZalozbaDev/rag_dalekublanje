@@ -68,6 +68,8 @@ export PATH="/home/danielzoba/.lmstudio/bin:$PATH"
 
 lms daemon up
 
+lms server start
+
 Daemon runs here: http://localhost:1234
 
 lms get qwen/qwen3-4b-2507
