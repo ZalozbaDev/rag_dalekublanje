@@ -17,7 +17,7 @@ collection = client.create_collection(name="docs")
 
 # store each document in a vector embedding database
 for i, d in enumerate(documents):
-  response = ollama.embed(model="mxbai-embed-large", input=d)
+  response = ollama.embed(model="nomic-embed-text", input=d)
   embeddings = response["embeddings"]
   collection.add(
     ids=[str(i)],
@@ -26,13 +26,14 @@ for i, d in enumerate(documents):
   )
 
 # an example input
-input = "What animals are llamas related to?"
+prompt = "What animals are llamas related to?"
 
 # generate an embedding for the input and retrieve the most relevant doc
 response = ollama.embed(
-  model="mxbai-embed-large",
+  model="nomic-embed-text",
   input=prompt
 )
+
 results = collection.query(
   query_embeddings=[response["embeddings"]],
   n_results=1
@@ -41,7 +42,7 @@ data = results['documents'][0][0]
 
 # generate a response combining the prompt and data we retrieved in step 2
 output = ollama.generate(
-  model="llama2",
+  model="llama3",
   prompt=f"Using this data: {data}. Respond to this prompt: {input}"
 )
 
