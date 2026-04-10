@@ -17,6 +17,10 @@ collection = client.create_collection(name="docs")
 
 embedding_model="nomic-embed-text"
 # embedding_model="bge-m3"
+# embedding_model="qllama/multilingual-e5-base"
+
+# chat_model="llama3"
+chat_model="kamekichi128/qwen3-4b-instruct-2507"
 
 # store each document in a vector embedding database
 for i, d in enumerate(documents):
@@ -55,7 +59,7 @@ print()
 
 # generate a response combining the prompt and data we retrieved in step 2
 output = ollama.generate(
-  model="llama3",
+  model=chat_model,
   prompt=f"Using this data: {data}. Respond to this prompt: {prompt}. If the answer is not found in the data, do not use any other sources and simply state that there is no data available for this request."
 )
 
