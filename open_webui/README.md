@@ -1,4 +1,4 @@
-# Installation
+# Installation OpenWeb UI
 
 Modelle per Hand runterladen:
 
@@ -58,5 +58,22 @@ curl http://localhost:11434/api/embeddings -d '{
 
 --> ERROR
 
+
+
+# LM Studio
+
+curl -fsSL https://lmstudio.ai/install.sh | bash
+
+export PATH="/home/danielzoba/.lmstudio/bin:$PATH"
+
+lms daemon up
+
+Daemon runs here: http://localhost:1234
+
+lms get qwen/qwen3-4b-2507
+
+Which embedding model to download???
+
+lms get e5-base ??? does not work
 
 
