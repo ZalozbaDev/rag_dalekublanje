@@ -26,7 +26,10 @@ for i, d in enumerate(documents):
   )
 
 # an example input
-prompt = "What animals are llamas related to?"
+# prompt = "What animals are llamas related to?"
+# prompt = "What kind of food do llamas like to eat?"
+prompt = "What colors do llamas like most to wear?"
+
 
 # generate an embedding for the input and retrieve the most relevant doc
 response = ollama.embed(
@@ -35,15 +38,22 @@ response = ollama.embed(
 )
 
 results = collection.query(
-  query_embeddings=[response["embeddings"]],
+  query_embeddings=response["embeddings"],
   n_results=1
 )
 data = results['documents'][0][0]
 
+print("------------------------------")
+print("Most relevant document from provided docs is:")
+print(data)
+print("------------------------------")
+print()
+
+
 # generate a response combining the prompt and data we retrieved in step 2
 output = ollama.generate(
   model="llama3",
-  prompt=f"Using this data: {data}. Respond to this prompt: {input}"
+  prompt=f"Using this data: {data}. Respond to this prompt: {prompt}. If the answer is not found in the data, do not use any other sources and simply state that there is no data available for this request."
 )
 
 print(output['response'])
