@@ -2,13 +2,15 @@ version: "3.9"
 
 services:
   open-webui:
-    image: ghcr.io/open-webui/open-webui:cuda
+    #image: ghcr.io/open-webui/open-webui:v0.8.12-cuda
+    image: openwebui/open-webui:0.8.12-cuda
     container_name: open-webui
     ports:
       - "3000:8080"
     volumes:
       - ./open-webui:/app/backend/data
     restart: always
+    privileged: true
     extra_hosts:
       - "host.docker.internal:host-gateway"
     environment:
@@ -26,6 +28,7 @@ services:
     volumes:
       - ./ollama:/root/.ollama
     restart: always
+    privileged: true
     #gpus: all
     runtime: nvidia
 
