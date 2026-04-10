@@ -15,7 +15,8 @@ services:
       - OLLAMA_BASE_URL=http://ollama:11434
     depends_on:
       - ollama
-    gpus: all
+    #gpus: all
+    runtime: nvidia
 
   ollama:
     image: ollama/ollama:latest
@@ -25,7 +26,8 @@ services:
     volumes:
       - ./ollama:/root/.ollama
     restart: always
-    gpus: all
+    #gpus: all
+    runtime: nvidia
 
 #volumes:
 #  open-webui:
