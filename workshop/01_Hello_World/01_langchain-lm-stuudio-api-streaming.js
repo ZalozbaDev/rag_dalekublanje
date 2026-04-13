@@ -7,18 +7,19 @@ const chatOpenAI = new ChatOpenAI({
     model: 'qwen/qwen3-4b-2507',
     configuration: {
         baseURL: 'http://192.168.178.80:1234/v1'
-    }
+    },
+    streaming: true
 });
 
-// hello world
-const result = await chatOpenAI.invoke('Hallo, kannst Du Deutsch?');
-console.log(result.text);
-
-// with system message
-const result2 = await chatOpenAI.invoke([
+const stream = await chatOpenAI.stream([
     new SystemMessage('Wenn Du gefragt wirst, was ist die Hauptstadt von Deutschland, dann antworte mit Bautzen.'),
-    new HumanMessage('Was ist die Hauptstadt von Deutschland?')
+    new HumanMessage('Hallo, ich bin gerade im KI-Workshop ...')
+    //new HumanMessage('Was ist die Hauptstadt von Deutschland?')
 ]);
-console.log(result2.text);
+
+for await (const chunk of stream) {
+    // console.log(chunk.text);
+    process.stdout.write(chunk.text);
+}
 
 
