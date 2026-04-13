@@ -19,4 +19,10 @@ LM Studio --> Linux (192.168.178.XXX:1234)
 
 npm install undici
 
+to use burp suite
+
+# Übung 4
+
+npm install cheerio @langchain/community
+
 
