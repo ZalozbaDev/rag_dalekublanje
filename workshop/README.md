@@ -25,4 +25,8 @@ to use burp suite
 
 npm install cheerio @langchain/community
 
+# next
+
+npm install zod
+
 

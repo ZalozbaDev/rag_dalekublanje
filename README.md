@@ -7,3 +7,5 @@ Wusledki z dalekublanja.
 
 * Visual Studio Live Share ausprobieren für Weiterbildungen!
 
+* https://www.youtube.com/watch?v=3vkBUqYdevM 
+
