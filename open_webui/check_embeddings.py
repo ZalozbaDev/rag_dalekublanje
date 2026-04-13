@@ -15,9 +15,16 @@ documents = [
 client = chromadb.Client()
 collection = client.create_collection(name="docs")
 
+embedding_model="nomic-embed-text"
+# embedding_model="bge-m3"
+# embedding_model="qllama/multilingual-e5-base"
+
+# chat_model="llama3"
+chat_model="kamekichi128/qwen3-4b-instruct-2507"
+
 # store each document in a vector embedding database
 for i, d in enumerate(documents):
-  response = ollama.embed(model="mxbai-embed-large", input=d)
+  response = ollama.embed(model=embedding_model, input=d)
   embeddings = response["embeddings"]
   collection.add(
     ids=[str(i)],
@@ -26,23 +33,34 @@ for i, d in enumerate(documents):
   )
 
 # an example input
-input = "What animals are llamas related to?"
+prompt = "What animals are llamas related to?"
+# prompt = "What kind of food do llamas like to eat?"
+# prompt = "What colors do llamas like most to wear?"
+
 
 # generate an embedding for the input and retrieve the most relevant doc
 response = ollama.embed(
-  model="mxbai-embed-large",
+  model=embedding_model,
   input=prompt
 )
+
 results = collection.query(
-  query_embeddings=[response["embeddings"]],
+  query_embeddings=response["embeddings"],
   n_results=1
 )
 data = results['documents'][0][0]
 
+print("------------------------------")
+print("Most relevant document from provided docs is:")
+print(data)
+print("------------------------------")
+print()
+
+
 # generate a response combining the prompt and data we retrieved in step 2
 output = ollama.generate(
-  model="llama2",
-  prompt=f"Using this data: {data}. Respond to this prompt: {input}"
+  model=chat_model,
+  prompt=f"Using this data: {data}. Respond to this prompt: {prompt}. If the answer is not found in the data, do not use any other sources and simply state that there is no data available for this request."
 )
 
 print(output['response'])

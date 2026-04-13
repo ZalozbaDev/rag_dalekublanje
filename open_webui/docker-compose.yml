@@ -21,7 +21,8 @@ services:
     runtime: nvidia
 
   ollama:
-    image: ollama/ollama:latest
+    image: ollama/ollama:0.20.3
+    # image: ollama/ollama:0.20.5
     container_name: ollama
     ports:
       - "11434:11434"
