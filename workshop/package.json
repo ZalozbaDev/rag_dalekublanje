@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@langchain/core": "^1.1.39",
+    "@langchain/openai": "^1.4.4",
+    "express": "^5.2.1",
+    "ollama-api-facade-js": "^1.0.7"
+  }
+}
