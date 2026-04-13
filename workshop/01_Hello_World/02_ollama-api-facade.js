@@ -3,9 +3,12 @@ import { createLMStudioConfig, createOllamaApiFacade } from 'ollama-api-facade-j
 import { ChatOpenAI } from "@langchain/openai";
 
 const chatOpenAI = new ChatOpenAI({
+    apiKey: 'none',
     model: 'qwen/qwen3-4b-2507',
     streaming: true,
-    ...createLMStudioConfig()
+    configuration: {
+        baseURL: 'http://192.168.178.80:1234/v1'
+    },
 });
 
 const app = express();
