@@ -13,4 +13,10 @@ Ollama API facade --> Windows (192.168.178.YYY:11434)
 
 LM Studio --> Linux (192.168.178.XXX:1234)
 
+* start LM Studio AppImage with "--no-sandbox"
+
+# Übung 3
+
+npm install undici
+
 
