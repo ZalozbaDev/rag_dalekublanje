@@ -29,4 +29,10 @@ npm install cheerio @langchain/community
 
 npm install zod
 
+# next
+
+npm install vectra --force
+
+
+
 

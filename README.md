@@ -15,3 +15,11 @@ Wusledki z dalekublanja.
 
 * https://www.youtube.com/watch?v=PxPodsfNn3M (Finetuning eines Encoders)
 
+* https://poloclub.github.io/transformer-explainer/
+
+* https://ig.ft.com/generative-ai/
+
+* https://bbycroft.net/llm
+
+* https://lunary.ai/gemma2-tokenizer
+
