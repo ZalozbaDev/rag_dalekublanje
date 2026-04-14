@@ -65,5 +65,6 @@ async function query(text) {
 
 
 // print similarities
-await query('Die Sonne verschwand langsam hinter den Bergen und tauchte den Himmel in ein tiefes Orange.');
+// await query('Die Sonne verschwand langsam hinter den Bergen und tauchte den Himmel in ein tiefes Orange.');
 // await query('Der Mond verschwand langsam hinter den Bergen und tauchte den Himmel in ein tiefes Schwarz.');
+await query('Słónco so pomału zady horami chowaše a njebjo na sylnu oranžowu barbu měnješe.');
