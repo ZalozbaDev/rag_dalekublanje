@@ -9,3 +9,9 @@ Wusledki z dalekublanja.
 
 * https://www.youtube.com/watch?v=3vkBUqYdevM 
 
+* https://www.youtube.com/watch?v=ksej2cNPpho
+
+* https://www.youtube.com/watch?v=YFQ_EPONAuw
+
+* https://www.youtube.com/watch?v=PxPodsfNn3M (Finetuning eines Encoders)
+
