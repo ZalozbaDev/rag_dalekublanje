@@ -23,3 +23,5 @@ Wusledki z dalekublanja.
 
 * https://lunary.ai/gemma2-tokenizer
 
+* https://www.linkedin.com/pulse/stoppt-den-hype-fehler-rag-semantische-suche-es-geht-um-biswanger-jvove/
+

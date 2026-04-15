@@ -22,8 +22,8 @@ if (!(await index.isIndexCreated())) {
 
 async function getEmbeddings(text) {
   const response = await openAiClient.embeddings.create({
-    model: 'text-embedding-multilingual-e5-base',
-    // model: 'text-embedding-multilingual-e5-large',
+    // model: 'text-embedding-multilingual-e5-base',
+    model: 'text-embedding-multilingual-e5-large',
     // model: 'jina-embeddings-v3',
     input: text,
     encoding_format: 'base64',
@@ -57,14 +57,14 @@ async function query(text) {
 
 // uncomment for first run (fill database)
 
-// await addItem('Die Sonne verschwand langsam hinter den Bergen und tauchte den Himmel in ein tiefes Orange.');
+//await addItem('Die Sonne verschwand langsam hinter den Bergen und tauchte den Himmel in ein tiefes Orange.');
 //await addItem('Künstliche Intelligenz revolutioniert die Medizin durch präzisere Diagnosen und personalisierte Therapien.')
 //await addItem('Nach einem langen Arbeitstag freute sich Lisa auf eine Tasse heißen Kamillentee.');
 //await addItem('Der alte Leuchtturm an der Küste trotzt seit Jahrhunderten Wind und Wetter.');
-//await addItem('Im letzten Fußballspiel überraschte die Mannschaft mit einer aggressiven Offensivstrategie.');
+// await addItem('Im letzten Fußballspiel überraschte die Mannschaft mit einer aggressiven Offensivstrategie.');
 
 
 // print similarities
-// await query('Die Sonne verschwand langsam hinter den Bergen und tauchte den Himmel in ein tiefes Orange.');
+await query('Die Sonne verschwand langsam hinter den Bergen und tauchte den Himmel in ein tiefes Orange.');
 // await query('Der Mond verschwand langsam hinter den Bergen und tauchte den Himmel in ein tiefes Schwarz.');
-await query('Słónco so pomału zady horami chowaše a njebjo na sylnu oranžowu barbu měnješe.');
+// await query('Słónco so pomału zady horami chowaše a njebjo na sylnu oranžowu barbu měnješe.');
