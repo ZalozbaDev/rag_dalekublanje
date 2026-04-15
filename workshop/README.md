@@ -37,7 +37,7 @@ npm install vectra --force
 
 npm install @qdrant/js-client-rest --force
 
-Console query für qg entries:
+Console query für qdrant qg entries:
 
 ```
 POST collections/vector-db-qg-chunking-md/points/scroll
@@ -64,6 +64,14 @@ POST collections/vector-db-qg-chunking-md/points/scroll
   }
 }
 ```
+
+# sicherheit
+
+- user prompt embedded und gegen embeddings bekannter böser prompts testen - und dann nicht an AI weitergeben
+
+- Generierte Antwort zuerst an eine AI schicken, mit der Aufgabe, auf Betrug zu testen, Antwort als einfaches JSON
+-- entweder dann doch antwort an den user, oder halt vorenthalten
+
 
 
 
