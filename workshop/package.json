@@ -4,6 +4,7 @@
     "@langchain/community": "^1.1.27",
     "@langchain/core": "^1.1.39",
     "@langchain/openai": "^1.4.4",
+    "@qdrant/js-client-rest": "^1.17.0",
     "cheerio": "^1.2.0",
     "express": "^5.2.1",
     "ollama-api-facade-js": "^1.0.7",

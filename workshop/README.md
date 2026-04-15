@@ -33,6 +33,10 @@ npm install zod
 
 npm install vectra --force
 
+# qdrant
+
+npm install @qdrant/js-client-rest --force
+
 
 
 
