@@ -37,6 +37,35 @@ npm install vectra --force
 
 npm install @qdrant/js-client-rest --force
 
+Console query für qg entries:
+
+```
+POST collections/vector-db-qg-chunking-md/points/scroll
+{
+  "limit": 10,
+  "with_payload": ["files", "sentence_indices", "question"],
+  "filter": {
+    "must": [
+      {
+        "key": "files",
+        "match": {
+          "any": [
+            "LLM07_SystemPromptLeakage.md"
+          ]
+        }
+      },
+      {
+        "key": "sentence_indices",
+        "match": {
+          "any": [48]
+        }
+      }
+    ]
+  }
+}
+```
+
+
 
 
 
