@@ -1,0 +1,14 @@
+[
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM00_Preface.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM01_PromptInjection.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM02_SensitiveInformationDisclosure.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM03_SupplyChain.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM04_DataModelPoisoning.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM05_ImproperOutputHandling.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM06_ExcessiveAgency.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM07_SystemPromptLeakage.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM08_VectorAndEmbeddingWeaknesses.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM09_Misinformation.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/LLM10_UnboundedConsumption.md",
+  "./02_RAG/owasp_llmai_de_2_0_vulns/Supplemental_Content.md"
+]
