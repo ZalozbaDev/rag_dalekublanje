@@ -39,7 +39,7 @@ mdFiles.forEach(async file => {
     const embedding = await getEmbeddings(chunk.pageContent);
       await index.insertItem({
             vector: embedding,
-            metadata: { text: chunk.pageContent},
+            metadata: { text: chunk.pageContent}, // TBD: metadata from chunk is currently ignored, can and should usually be added
         });
   });
 });
