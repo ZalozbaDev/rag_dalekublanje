@@ -87,8 +87,9 @@ async function processMarkdownFile(filePath) {
   // 3. Semantische Chunks bilden wie in deinem PDF Code
   const chunks = [];
 
+  // diese einstellungen sind wichtig
   const similarityThreshold = 0.7;
-  const maxChunkChars = 2200;
+  const maxChunkChars = 2200; // orientiert sich am tokenizer, damit die chunks nicht abgeschnitten werden (z.B. 512 Tokens für BERT-basierte Modelle)
   const minChunkChars = 90;
 
   let currentChunk = [];
