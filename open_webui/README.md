@@ -19,6 +19,7 @@ docker exec -it ollama ollama pull qllama/multilingual-e5-large
 
 docker exec -it ollama ollama pull nomic-embed-text
 docker exec -it ollama ollama pull kamekichi128/qwen3-4b-instruct-2507
+docker exec -it ollama ollama pull nomic-embed-text-v2-moe
 
 # Test
 
