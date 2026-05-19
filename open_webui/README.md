@@ -79,4 +79,8 @@ Which embedding model to download???
 
 lms get e5-base ??? does not work
 
+# show prompts going to ollama
+
+sudo tcpdump -i any -s 0 port 11434 -A 
+
 
