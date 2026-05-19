@@ -25,3 +25,14 @@ Wusledki z dalekublanja.
 
 * https://www.linkedin.com/pulse/stoppt-den-hype-fehler-rag-semantische-suche-es-geht-um-biswanger-jvove/
 
+* https://www.youtube.com/GregorBiswanger
+
+# wjacore rěče
+
+youtube gregor biswanger : embedding modelle verstehen und einsetzen --> finetuning
+
+https://www.youtube.com/watch?si=vnN1pEzenkphgHiQ&t=10863&v=PxPodsfNn3M&feature=youtu.be
+
+--> Freezing
+
+--> Full finetuning?
